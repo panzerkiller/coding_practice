@@ -4,9 +4,22 @@ class Solution:
     @param grid: a boolean 2D matrix
     @return: an integer
     """
+    # grid = [[]]
+    def __new__(cls, *args, **kwargs):
+        print("class new obj")
+        return super().__new__(cls)
+    
+    def __init__(self, ext_grid):
+        print("init")
+        self.grid = ext_grid
+    
+    def __repr__(self):
+        return f"self.numIslands()"
+        # print(self.grid)
 
-    def numIslands(self, grid):
+    def numIslands(self):
         # write your code here
+        grid = self.grid
         if not grid or len(grid[0]) == 0:
             return 0
 
@@ -39,10 +52,16 @@ class Solution:
 
 def main():
     grid = [[1,1,0,0,0],[0,1,0,0,1],[0,0,0,1,1],[0,0,0,0,0],[0,0,0,0,1]]
-    ob = Solution()
-    res = ob.numIslands(grid)
-    print(res)
+    ob = Solution(grid)
+    # res = ob.numIslands(grid)
+    # print(res)
 
 #main()
 if __name__ == "__main__":
-     main()
+    grid = [[1,1,0,0,0],[0,1,0,0,1],[0,0,0,1,1],[0,0,0,0,0],[0,0,0,0,1]]
+    ob = Solution(grid)
+    res = ob.numIslands()
+    print("Found " + str(res) + " islands in below map:")
+    for i in range(len(ob.grid)):
+        print(ob.grid[i])
+    
