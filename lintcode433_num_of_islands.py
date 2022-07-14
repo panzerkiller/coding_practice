@@ -53,15 +53,19 @@ class Solution:
 def main():
     grid = [[1,1,0,0,0],[0,1,0,0,1],[0,0,0,1,1],[0,0,0,0,0],[0,0,0,0,1]]
     ob = Solution(grid)
-    # res = ob.numIslands(grid)
-    # print(res)
-
-#main()
-if __name__ == "__main__":
-    grid = [[1,1,0,0,0],[0,1,0,0,1],[0,0,0,1,1],[0,0,0,0,0],[0,0,0,0,1]]
-    ob = Solution(grid)
     res = ob.numIslands()
     print("Found " + str(res) + " islands in below map:")
     for i in range(len(ob.grid)):
         print(ob.grid[i])
+
+
+#main()
+if __name__ == "__main__":
+    main()
+    # grid = [[1,1,0,0,0],[0,1,0,0,1],[0,0,0,1,1],[0,0,0,0,0],[0,0,0,0,1]]
+    # ob = Solution(grid)
+    # res = ob.numIslands()
+    # print("Found " + str(res) + " islands in below map:")
+    # for i in range(len(ob.grid)):
+    #     print(ob.grid[i])
     
