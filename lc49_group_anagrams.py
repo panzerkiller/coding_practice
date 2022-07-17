@@ -13,7 +13,9 @@ class Solution:
 			hashmap[ss].append(s)
 		return hashmap.values()
 
-if __name__ == "__main__":
+def main():
 	strs = ["eat","tea","tan","ate","nat","bat"]
 	ob = Solution(strs)
 	print(ob.groupAnagrams())
+if __name__ == "__main__":
+	main()
